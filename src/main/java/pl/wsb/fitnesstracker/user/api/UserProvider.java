@@ -25,12 +25,32 @@ public interface UserProvider {
     Optional<User> getUserByEmail(String email);
 
     /**
+     * Retrieves a user based on their id.
+     * If the user with given id is not found, then {@link Optional#empty()} will be returned.
+     *
+     * @param id The id of the user to be searched
+     * @return An {@link Optional} containing the located user, or {@link Optional#empty()} if not found
+     */
+    Optional<User> getUserById(int id);
+    /**
      * Retrieves all users.
      *
-     * @return An {@link Optional} containing the all users,
+     * @return An {@link Optional} containing the all users data.
      */
     List<User> findAllUsers();
 
+    /**
+     * Retrieves all users simple data.
+     *
+     * @return list of {@link User} objects
+     */
+    List<User> findAllUsersSimple();
+
+    /**
+     * Retrieves all users older than birthdate.
+     *
+     * @return list of {@link User} objects
+     */
     List<User> findUserOlderThan(LocalDate birthdate);
 
 

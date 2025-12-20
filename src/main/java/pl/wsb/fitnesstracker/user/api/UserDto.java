@@ -5,6 +5,7 @@ import jakarta.annotation.Nullable;
 
 import java.time.LocalDate;
 
+
 /**
  * Data Transfer Object representing user details exchanged through the API.
  * <p>
@@ -47,4 +48,3 @@ public record UserDto(
         String email
 
 ) {}
-
