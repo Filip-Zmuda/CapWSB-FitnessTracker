@@ -40,12 +40,17 @@ public interface UserProvider {
     List<User> findAllUsers();
 
     /**
-     * Retrieves all users data simple.
+     * Retrieves all users simple data.
      *
      * @return list of {@link User} objects
      */
     List<User> findAllUsersSimple();
 
+    /**
+     * Retrieves all users older than birthdate.
+     *
+     * @return list of {@link User} objects
+     */
     List<User> findUserOlderThan(LocalDate birthdate);
 
 
